@@ -8,12 +8,93 @@
 
 <title>African Institute for Ethical Governance</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="images/governance-bg.jpg">
 <link rel="preload" as="image" href="images/aieg-logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* CRITICAL CSS - HEADER */
+
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+background:#F5F7F9;
+}
+
+header{
+background:white;
+border-bottom:3px solid #00897B;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:10px 0;
+}
+
+.logo img{
+height:70px;
+}
+
+/* HERO */
+
+.hero{
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url("images/governance-bg.webp");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:750px;
+padding:20px;
+}
+
+.hero h1{
+color:#F4A300;
+font-size:44px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+</style>
+
+<link rel="preload" href="css/style.css" as="style"
+onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link rel="stylesheet" href="css/style.css">
+</noscript>
+
+
+<link rel="preload" href="css/style.css" as="style"
+onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+<link rel="stylesheet" href="css/style.css">
+</noscript>
 
 </head>
 
