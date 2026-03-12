@@ -12,21 +12,6 @@
 
 </head>
 
-<script src="js/script.js"></script>
-
-<script>
-
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-
-});
-
-</script>
 
 <body>
 
@@ -216,19 +201,38 @@ All rights reserved.
 <script src="js/script.js"></script>
 <script>
 
-document.getElementById("contactForm").addEventListener("submit", function(e){
+document.querySelectorAll(".read-more").forEach(button => {
 
-e.preventDefault();
+button.addEventListener("click", function(){
 
-let message = document.getElementById("formMessage");
+const bio = this.previousElementSibling;
 
-message.innerText = "Thank you! Your message has been sent.";
-message.classList.add("show");
+bio.classList.toggle("expanded");
 
-this.reset();
+this.textContent =
+bio.classList.contains("expanded")
+? "Read Less"
+: "Read More";
+
+});
 
 });
 
 </script>
+
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+
+});
+
+</script>
+
 </body>
 </html>

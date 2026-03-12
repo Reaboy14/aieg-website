@@ -12,21 +12,9 @@
 
 </head>
 
-<script src="js/script.js"></script>
 
-<script>
 
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-
-});
-
-</script>
 
 <body>
 
@@ -224,7 +212,43 @@ All rights reserved.
 </footer>
 
 
+
 <script src="js/script.js"></script>
+
+<script>
+
+document.querySelectorAll(".read-more").forEach(button => {
+
+button.addEventListener("click", function(){
+
+const bio = this.previousElementSibling;
+
+bio.classList.toggle("expanded");
+
+this.textContent =
+bio.classList.contains("expanded")
+? "Read Less"
+: "Read More";
+
+});
+
+});
+
+</script>
+
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+
+});
+
+</script>
 
 </body>
 </html>
