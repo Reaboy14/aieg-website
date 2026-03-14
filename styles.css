@@ -1,14 +1,53 @@
-:root {
-    --main-bg-color: #f0f0f0;
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --text-color: #333;
+/* Corrected and optimized CSS */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-.card {
-    background-color: var(--main-bg-color);
-    border: 1px solid var(--primary-color);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Optimized button styles */
+.button {
+    display: inline-block;
+    background: #29a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    padding: 10px;
-    color: var(--text-color);
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #218838;
+}
+
+/* Remove unused classes and variables */
+/* Add necessary media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
 }
