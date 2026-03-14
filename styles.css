@@ -1,53 +1,87 @@
-/* Corrected and optimized CSS */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
 .container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .header {
-    background: #333;
+    background-color: #222;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.hero {
+    background: url('hero-image.jpg') center center / cover;
+    height: 400px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.course {
+    border: 1px solid #eaeaea;
+}
+
+.accordion {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.custom-program {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.partnerships {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer {
-    background: #333;
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
 }
 
-/* Optimized button styles */
-.button {
-    display: inline-block;
-    background: #29a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: #218838;
-}
-
-/* Remove unused classes and variables */
-/* Add necessary media queries for responsiveness */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    .team-grid {
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .nav li {
+        display: block;
+        margin: 10px 0;
     }
 }
