@@ -371,16 +371,19 @@ margin:12px auto;
 CARDS
 ================================================= */
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 24px;
+.card-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
 }
 
 
-.card {
-  padding: var(--space-md);
-  margin-bottom: var(--space-lg);
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:.3s;
 }
 
 .card:hover{
