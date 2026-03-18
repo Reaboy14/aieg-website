@@ -177,21 +177,75 @@ institutional reform, and sustainable governance across both public and private 
 
 
 
+
 <!-- RESOURCES -->
 
 <section id="resources">
 
 <div class="container">
 
-
 <h2 class="section-title">Resources</h2>
 
 <p>
-Research publications, policy insights,
-webinars and governance tools developed by AIEG.
+Explore our research publications, videos, and governance tools.
 </p>
 
+<!-- RESOURCE FILTER TABS -->
+
+<div class="resource-tabs">
+<button onclick="filterResources('all')">All</button>
+<button onclick="filterResources('pdf')">PDFs</button>
+<button onclick="filterResources('video')">Videos</button>
 </div>
+
+<!-- RESOURCE GRID -->
+
+<div class="resource-grid">
+
+<!-- PDF RESOURCE -->
+<div class="resource-item pdf">
+<h3>Coporate Governance</h3>
+<p>Download our latest governance research publication.</p>
+<a href="resources/Coporate Governance.pdf" target="_blank" class="btn">
+Download PDF
+</a>
+</div>
+
+<div class="resource-item pdf">
+<h3>Anti-Corruption and Ethics</h3>
+<p>Download our Anti-Corruption and Ethics research publication.</p>
+<a href="resources/Anti-Corruption and Ethics.pdf" target="_blank" class="btn">
+Download PDF
+</a>
+</div>
+
+<div class="resource-item pdf">
+<h3>Governance in Public Sector</h3>
+<p>Download our Governance in Public Sector research publication.</p>
+<a href="resources/Anti-Governance in Public Sector.pdf" target="_blank" class="btn">
+Download PDF
+</a>
+</div>
+
+<div class="resource-item pdf">
+<h3>Ethical Conduct In Public Service</h3>
+<p>Download our Ethical Conduct In Public Service research publication.</p>
+<a href="resources/Ethical Conduct In Public Service.pdf" target="_blank" class="btn">
+Download PDF
+</a>
+</div>
+
+<!-- VIDEO RESOURCE -->
+<div class="resource-item video">
+<h3>Ethical Leadership Webinar</h3>
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/VIDEO_ID"
+frameborder="0" allowfullscreen>
+</iframe>
+</div>
+
+<!-- IMAGE RESOURCE -->
+
 
 </section>
 
@@ -268,6 +322,22 @@ hamburger.addEventListener("click", () => {
 
 });
 
+</script>
+
+<script>
+function filterResources(type) {
+    const items = document.querySelectorAll('.resource-item');
+
+    items.forEach(item => {
+        if (type === 'all') {
+            item.style.display = 'block';
+        } else {
+            item.style.display = item.classList.contains(type)
+                ? 'block'
+                : 'none';
+        }
+    });
+}
 </script>
 
 </body>

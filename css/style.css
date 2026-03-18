@@ -864,3 +864,52 @@ font-size:36px;
 }
 
 }
+
+
+/* =================================================
+RESOURCES
+================================================= */
+
+.resource-tabs{
+text-align:center;
+margin:20px 0;
+}
+
+.resource-tabs button{
+margin:5px;
+padding:10px 15px;
+border:none;
+background:#00897B;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+.resource-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.resource-item{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resource-item img{
+width:100%;
+border-radius:8px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#F4A300;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
