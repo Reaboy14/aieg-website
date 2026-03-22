@@ -58,33 +58,60 @@ height:70px;
 
 /* HERO */
 
-.hero{
-height:85vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url("images/governance-bg.webp");
-background-size:cover;
-background-position:center;
+.hero {
+  min-height: 20vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+  url("images/governance-bg.webp");
+
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-content{
-max-width:750px;
-padding:20px;
+.hero {
+  margin-bottom: 20px;
 }
 
-.hero h1{
-color:#F4A300;
-font-size:44px;
-margin-bottom:20px;
+section {
+  margin: 60px 0;
 }
 
-.hero p{
-font-size:18px;
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+  min-height: clamp(400px, 60vh, 650px);
+}
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+  min-height: clamp(400px, 60vh, 650px);
+}
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
 }
 
 </style>
@@ -146,7 +173,7 @@ onload="this.onload=null;this.rel='stylesheet'">
 
 
 <section class="hero">
-  <img src="images/governance-bg.webp" class="hero-bg" alt="" loading="eager">
+  
   <div class="hero-content">
 
 <h1>African Institute for Ethical Governance</h1>
@@ -551,6 +578,18 @@ hamburger.addEventListener("click", () => {
 
 </script>
 
+<script>
+document.querySelectorAll('.segment').forEach(segment => {
+  segment.addEventListener('click', function () {
+    const target = this.getAttribute('data-target');
+    const section = document.getElementById(target);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
 
 </body>
 </html>

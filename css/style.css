@@ -907,3 +907,234 @@ color:white;
 text-decoration:none;
 border-radius:5px;
 }
+
+/* =================================================
+CORE VALUES WHEEL
+================================================= */
+
+.core-values-wheel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.core-values-wheel img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .core-values-wheel {
+    margin: 30px auto;
+  }
+
+  .core-values-wheel img {
+    max-width: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .core-values-wheel {
+    margin: 20px auto;
+  }
+
+  .core-values-wheel img {
+    max-width: 100%;
+  }
+}
+
+.core-values-wheel img {
+  transition: transform 0.3s ease;
+}
+
+.core-values-wheel img:hover {
+  transform: scale(1.03);
+}
+
+.core-values-wheel {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.wheel-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+}
+
+.wheel-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hotspots base */
+.hotspot {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Optional visual hover (remove if you want invisible zones) */
+.hotspot:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+/* Position each segment (tuned for your wheel layout) */
+.integrity {
+  top: 5%;
+  left: 35%;
+}
+
+.accountability {
+  top: 10%;
+  right: 5%;
+}
+
+.innovation {
+  top: 40%;
+  right: 5%;
+}
+
+.ownership {
+  bottom: 5%;
+  right: 25%;
+}
+
+.professionalism {
+  bottom: 5%;
+  left: 25%;
+}
+
+.ubuntu {
+  top: 40%;
+  left: 5%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .hotspot {
+    width: 28%;
+    height: 28%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.core-values-wheel {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.core-values-wheel {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.wheel-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.wheel-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base hotspot */
+.hotspot {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+/* Optional hover visual */
+.hotspot:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* 🎯 PRECISE POSITIONS (percentage-based = responsive) */
+
+/* Top */
+.integrity {
+  top: 18%;
+  left: 50%;
+}
+
+/* Top-right */
+.accountability {
+  top: 32%;
+  left: 78%;
+}
+
+/* Bottom-right */
+.innovation {
+  top: 68%;
+  left: 78%;
+}
+
+/* Bottom */
+.ownership {
+  top: 82%;
+  left: 50%;
+}
+
+/* Bottom-left */
+.professionalism {
+  top: 68%;
+  left: 22%;
+}
+
+/* Top-left */
+.ubuntu {
+  top: 32%;
+  left: 22%;
+}
+
+/* Mobile tweak */
+@media (max-width: 480px) {
+  .hotspot {
+    width: 26%;
+    height: 26%;
+  }
+}
+
+.hotspot::after {
+  content: attr(class);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00897B;
+  color: white;
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.hotspot:hover::after {
+  opacity: 1;
+}

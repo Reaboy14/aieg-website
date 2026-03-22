@@ -58,35 +58,140 @@ height:70px;
 
 /* HERO */
 
-.hero{
-height:85vh;
+.hero {
+  min-height: 20vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+  url("images/governance-bg.webp");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+  min-height: clamp(400px, 60vh, 650px);
+}
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+  min-height: clamp(400px, 60vh, 650px);
+}
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+}
+/* CRITICAL CSS - HEADER */
+
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+background:#F5F7F9;
+}
+
+header{
+background:white;
+border-bottom:3px solid #00897B;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
 display:flex;
+justify-content:space-between;
 align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url("images/governance-bg.webp");
-background-size:cover;
-background-position:center;
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:10px 0;
 }
 
-.hero-content{
-max-width:750px;
-padding:20px;
+.logo img{
+height:70px;
 }
 
-.hero h1{
-color:#F4A300;
-font-size:44px;
-margin-bottom:20px;
+/* HERO */
+
+.hero {
+  min-height: 20vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+  url("images/governance-bg.webp");
+
+  background-size: cover;
+  background-position: center;
 }
 
-.hero p{
-font-size:18px;
+.hero {
+  margin-bottom: 20px;
 }
 
+section {
+  margin: 60px 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+  min-height: clamp(400px, 60vh, 650px);
+}
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+  min-height: clamp(400px, 60vh, 650px);
+}
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+}
 </style>
 
 
@@ -147,7 +252,7 @@ onload="this.onload=null;this.rel='stylesheet'">
 
 
 <section class="hero">
-  <img src="images/governance-bg.webp" class="hero-bg" alt="" loading="eager">
+  
   <div class="hero-content">
 
 <h1>African Institute for Ethical Governance</h1>
@@ -194,17 +299,24 @@ research and advisory services.
 
 <h2 class="section-title">Core Values</h2>
 
-<ul>
+<div class="core-values-wheel">
 
-<li>Integrity</li>
-<li>Accountability</li>
-<li>Ubuntu</li>
-<li>Professionalism</li>
-<li>Innovation</li>
+  <div class="wheel-container">
+    <img src="images/wheel.webp" alt="Core Values Wheel">
 
-</ul>
+    <!-- Hotspots -->
+    <a href="#integrity" class="hotspot integrity"></a>
+    <a href="#accountability" class="hotspot accountability"></a>
+    <a href="#innovation" class="hotspot innovation"></a>
+    <a href="#ownership" class="hotspot ownership"></a>
+    <a href="#professionalism" class="hotspot professionalism"></a>
+    <a href="#ubuntu" class="hotspot ubuntu"></a>
+  </div>
 
 </div>
+
+
+
 
 </section>
 
@@ -452,6 +564,19 @@ hamburger.addEventListener("click", () => {
 
 });
 
+</script>
+
+<script>
+document.querySelectorAll('.segment').forEach(segment => {
+  segment.addEventListener('click', function () {
+    const target = this.getAttribute('data-target');
+    const section = document.getElementById(target);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 </script>
 
 </body>
