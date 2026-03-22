@@ -884,6 +884,9 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 margin-top:30px;
+
+/* ADD THIS */
+align-items:stretch;
 }
 
 .resource-item{
@@ -912,8 +915,8 @@ margin-bottom:15px;
 }
 
 .btn{
+margin-top:auto;
 display:inline-block;
-margin-top:auto; /* KEY LINE */
 padding:10px 15px;
 background:#F4A300;
 color:white;
