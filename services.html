@@ -429,5 +429,19 @@ document.querySelectorAll('.segment').forEach(segment => {
 });
 </script>
 
+<script>
+function filterResources(type) {
+    const items = document.querySelectorAll('.resource-item');
+
+    items.forEach(item => {
+        if (type === 'all' || item.classList.contains(type)) {
+            item.style.display = 'flex';   // ✅ NOT 'block'
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
+
 </body>
 </html>
