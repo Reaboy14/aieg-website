@@ -587,6 +587,33 @@ height:160px;
 
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-box {
+  background: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.close-modal {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
 
 /* ACCORDION */
 
@@ -603,17 +630,20 @@ border-radius:6px;
 margin-bottom:5px;
 }
 
+.accordion-header small.hint {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #FF0000;
+  margin-top: 5px;
+}
+
 .accordion-header:hover{
 background:var(--africa-earth);
 }
 
-.accordion-content{
-max-height:0;
-overflow:hidden;
-transition:max-height 0.4s ease;
-background:#f7f7f7;
-padding:0 15px;
-border-radius:6px;
+.accordion-content {
+  display: none;
 }
 
 @media(max-width:600px){
