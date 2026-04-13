@@ -860,6 +860,73 @@ opacity:.8;
   opacity: 0.8;
 }
 
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 50px 20px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  background: #1877F2;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1f2937;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
 
 /* =================================================
 RESPONSIVE
