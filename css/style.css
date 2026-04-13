@@ -851,6 +851,15 @@ opacity:.8;
   text-decoration: underline;
 }
 
+.social-links a {
+  font-size: 20px;
+  color: #1877F2; /* Facebook blue */
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
 
 /* =================================================
 RESPONSIVE
