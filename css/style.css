@@ -837,6 +837,20 @@ font-size:14px;
 opacity:.8;
 }
 
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #00897B;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
 
 /* =================================================
 RESPONSIVE
