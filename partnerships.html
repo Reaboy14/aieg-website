@@ -349,69 +349,8 @@ South Africa</p>
 
 
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 
-<script>
-
-document.querySelectorAll(".read-more").forEach(button => {
-
-button.addEventListener("click", function(){
-
-const bio = this.previousElementSibling;
-
-bio.classList.toggle("expanded");
-
-this.textContent =
-bio.classList.contains("expanded")
-? "Read Less"
-: "Read More";
-
-});
-
-});
-
-</script>
-
-<script>
-
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-
-});
-
-</script>
-
-<script>
-document.querySelectorAll('.segment').forEach(segment => {
-  segment.addEventListener('click', function () {
-    const target = this.getAttribute('data-target');
-    const section = document.getElementById(target);
-
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-</script>
-
-<script>
-function filterResources(type) {
-    const items = document.querySelectorAll('.resource-item');
-
-    items.forEach(item => {
-        if (type === 'all' || item.classList.contains(type)) {
-            item.style.display = 'flex';   // ✅ NOT 'block'
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-</script>
 
 </body>
 </html>
