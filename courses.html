@@ -24,14 +24,16 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 /* CRITICAL CSS - HEADER */
 
-body{
-margin:0;
-font-family:'Inter', sans-serif;
-background:#F5F7F9;
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #F5F7F9;
 }
 
 header{
@@ -52,28 +54,31 @@ margin:auto;
 padding:10px 0;
 }
 
-.logo img{
-height:70px;
+.logo img {
+  height: 70px;
+  width: auto;
 }
 
-/* HERO */
+/* HERO (OPTIMIZED) */
 
 .hero {
-  min-height: 20vh;
-  height: auto;
+  min-height: 60vh; /* stable height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 30px 20px;
+  padding: 40px 20px;
 
   background:
-  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-  url("images/governance-bg.webp");
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url("images/governance-bg.webp");
 
   background-size: cover;
   background-position: center;
+
+  /* Prevent layout shift */
+  aspect-ratio: 16 / 9;
 }
 
 .hero {
@@ -81,7 +86,7 @@ height:70px;
 }
 
 section {
-  margin: 60px 0;
+  padding: 60px 20px;
 }
 
 /* Tablet */
@@ -90,13 +95,13 @@ section {
   min-height: clamp(400px, 60vh, 650px);
 }
 
-  .hero h1 {
-    font-size: 32px;
-  }
+.hero h1 {
+  font-size: clamp(26px, 5vw, 40px);
+}
 
-  .hero p {
-    font-size: 16px;
-  }
+.hero p {
+  font-size: clamp(15px, 2.5vw, 18px);
+}  
 }
 
 /* Mobile */
@@ -105,13 +110,13 @@ section {
   min-height: clamp(400px, 60vh, 650px);
 }
 
-  .hero h1 {
-    font-size: 26px;
-  }
+.hero h1 {
+  font-size: clamp(26px, 5vw, 40px);
+}
 
-  .hero p {
-    font-size: 15px;
-  }
+.hero p {
+  font-size: clamp(15px, 2.5vw, 18px);
+}  
 }
 
 .modal {
@@ -179,7 +184,7 @@ onload="this.onload=null;this.rel='stylesheet'">
 
 <div class="logo">
 <a href="index.html">
-<img src="images/aieg-logo.png" alt="AIEG Logo">
+<img src="images/aieg-logo.png" alt="AIEG Logo" width="200" height="70">
 </a>
 </div>
 
