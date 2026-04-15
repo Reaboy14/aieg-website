@@ -550,8 +550,14 @@ header {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  visibility: hidden;        /* belt-and-suspenders: truly removes from paint */
+  transition: max-height 0.4s ease, visibility 0s 0.4s;
   padding: 0 20px;
+}
+
+.accordion-header.active + .accordion-content {
+  visibility: visible;
+  transition: max-height 0.4s ease, visibility 0s 0s;
 }
 
 .accordion-content > * { padding: 4px 0; }

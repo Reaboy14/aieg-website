@@ -42,40 +42,48 @@ if (hamburger && navLinks) {
 
 
 /* =========================
-   ACCORDION (COURSES PAGE)
+   ACCORDION (non-courses pages)
+   On the courses page the modal handler below takes full control;
+   accordion expand/collapse is skipped there entirely.
    ========================= */
 
 const accordionHeaders = document.querySelectorAll(".accordion-header");
+const isCoursesPage   = !!document.getElementById("courseModal");
 
 accordionHeaders.forEach(button => {
   button.setAttribute("aria-expanded", "false");
   const content = button.nextElementSibling;
   if (content) {
+    // Always start collapsed and hidden so nothing bleeds through
+    content.style.maxHeight = null;
     const id = "acc-" + Math.random().toString(36).slice(2, 8);
     content.id = id;
     button.setAttribute("aria-controls", id);
   }
 
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
+  // Only wire up expand/collapse on pages without the modal
+  if (!isCoursesPage) {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
 
-    // Close all others
-    accordionHeaders.forEach(other => {
-      if (other !== button) {
-        other.classList.remove("active");
-        other.setAttribute("aria-expanded", "false");
-        const otherContent = other.nextElementSibling;
-        if (otherContent) otherContent.style.maxHeight = null;
+      // Close all others
+      accordionHeaders.forEach(other => {
+        if (other !== button) {
+          other.classList.remove("active");
+          other.setAttribute("aria-expanded", "false");
+          const otherContent = other.nextElementSibling;
+          if (otherContent) otherContent.style.maxHeight = null;
+        }
+      });
+
+      // Toggle current
+      const isOpen = button.classList.toggle("active");
+      button.setAttribute("aria-expanded", String(isOpen));
+      if (content) {
+        content.style.maxHeight = isOpen ? content.scrollHeight + "px" : null;
       }
     });
-
-    // Toggle current
-    const isOpen = button.classList.toggle("active");
-    button.setAttribute("aria-expanded", String(isOpen));
-    if (content) {
-      content.style.maxHeight = isOpen ? content.scrollHeight + "px" : null;
-    }
-  });
+  }
 });
 
 
@@ -128,24 +136,36 @@ document.querySelectorAll(".resource-tabs button").forEach(btn => {
   if (!modal) return;
 
   const modalContent = document.getElementById("modalContent");
-  const closeBtn = modal.querySelector(".close-modal");
-  const modalBox = modal.querySelector(".modal-box");
+  const closeBtn     = modal.querySelector(".close-modal");
+  const modalBox     = modal.querySelector(".modal-box");
+
+  /** Ensure no accordion content is visually expanded */
+  function collapseAllAccordions() {
+    document.querySelectorAll(".accordion-header").forEach(btn => {
+      btn.classList.remove("active");
+      btn.setAttribute("aria-expanded", "false");
+      const c = btn.nextElementSibling;
+      if (c) { c.style.maxHeight = null; c.style.overflow = "hidden"; }
+    });
+  }
 
   function openModal(contentHTML) {
+    collapseAllAccordions();           // hide content before modal opens
     modalContent.innerHTML = contentHTML;
     modal.style.display = "flex";
     modal.setAttribute("aria-hidden", "false");
-    closeBtn.focus();
     document.body.style.overflow = "hidden";
+    closeBtn.focus();
   }
 
   function closeModal() {
     modal.style.display = "none";
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    collapseAllAccordions();           // guarantee nothing is left open
   }
 
-  // Override accordion behaviour on courses page to use modal
+  // Each accordion header click → open modal with that course's content
   document.querySelectorAll(".accordion-header").forEach(button => {
     button.addEventListener("click", function () {
       const content = this.nextElementSibling;
@@ -160,7 +180,7 @@ document.querySelectorAll(".resource-tabs button").forEach(btn => {
   });
 
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape" && modal.style.display === "flex") closeModal();
   });
 })();
 
