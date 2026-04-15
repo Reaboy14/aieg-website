@@ -1,568 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | African Institute for Ethical Governance (AIEG)</title>
+  <meta name="description" content="Learn about AIEG's founding team, vision, mission and core values driving ethical governance across Africa.">
+  <meta name="keywords"    content="ethical leadership, governance training, anti-corruption training, Africa governance institute, ESG leadership, public sector ethics">
+  <meta name="author"      content="African Institute for Ethical Governance">
+  <link rel="canonical"    href="https://www.aiegr.org/about.html">
 
-<title>African Institute for Ethical Governance (AIEG) | Ethical Leadership & Governance Training</title>
+  <link rel="preload" as="image" href="images/governance-bg.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/aieg-logo.png">
 
-<meta name="description" content="The African Institute for Ethical Governance (AIEG) promotes ethical leadership, governance reform, and institutional integrity across public and private sectors in Africa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@600;700&display=swap"></noscript>
 
-<meta name="keywords" content="Ethical leadership, governance training, anti-corruption training, Africa governance institute, ESG leadership, public sector ethics">
+  <style>
+    body { margin:0; font-family:'Inter',sans-serif; background:#F5F7F9; }
+    header { background:#fff; border-bottom:3px solid #00695C; position:sticky; top:0; z-index:1000; padding:10px 0; }
+    .navbar { display:flex; justify-content:space-between; align-items:center; width:90%; max-width:1200px; margin:auto; }
+    .logo img { height:70px; width:auto; }
+    .hamburger { display:none; flex-direction:column; cursor:pointer; gap:5px; background:none; border:none; padding:4px; }
+    .hamburger span { width:25px; height:3px; background:#1F2933; display:block; border-radius:2px; }
+    .nav-links { display:flex; gap:30px; list-style:none; }
+    .nav-links a { color:#1F2933; text-decoration:none; font-weight:500; }
+    .hero { min-height:52vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding:80px 20px;
+      background: linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.72)), url("images/governance-bg.webp") center/cover no-repeat; }
+    .hero-content { max-width:750px; }
+    .hero h1 { color:#F4A300; margin-bottom:20px; font-size:44px; line-height:1.2; }
+    .hero p  { font-size:18px; opacity:.95; }
+    @media(max-width:900px){ .hamburger{display:flex;} .nav-links{display:none;} .nav-links.active{display:flex;position:absolute;top:93px;left:0;width:100%;background:#fff;flex-direction:column;align-items:center;gap:18px;padding:25px 0;box-shadow:0 8px 20px rgba(0,0,0,.08);} }
+    @media(max-width:768px){ .hero{min-height:clamp(380px,60vh,600px);} .hero h1{font-size:32px;} .hero p{font-size:16px;} }
+    @media(max-width:480px){ .hero h1{font-size:26px;} }
+  </style>
 
-<meta name="author" content="African Institute for Ethical Governance">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-<link rel="canonical" href="https://www.aiegr.org/">
-
-<link rel="preload" as="image" href="images/governance-bg.webp">
-<link rel="preload" as="image" href="images/aieg-logo.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* CRITICAL CSS - HEADER */
-
-body{
-margin:0;
-font-family:'Inter', sans-serif;
-background:#F5F7F9;
-}
-
-header{
-background:white;
-border-bottom:3px solid #00897B;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:10px 0;
-}
-
-.logo img{
-height:70px;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 20vh;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 30px 20px;
-
-  background:
-  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-  url("images/governance-bg.webp");
-
-  background-size: cover;
-  background-position: center;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .hero {
-  min-height: clamp(400px, 60vh, 650px);
-}
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .hero {
-  min-height: clamp(400px, 60vh, 650px);
-}
-
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-}
-/* CRITICAL CSS - HEADER */
-
-body{
-margin:0;
-font-family:'Inter', sans-serif;
-background:#F5F7F9;
-}
-
-header{
-background:white;
-border-bottom:3px solid #00897B;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:10px 0;
-}
-
-.logo img{
-height:70px;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 20vh;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 30px 20px;
-
-  background:
-  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-  url("images/governance-bg.webp");
-
-  background-size: cover;
-  background-position: center;
-}
-
-.hero {
-  margin-bottom: 20px;
-}
-
-section {
-  margin: 60px 0;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .hero {
-  min-height: clamp(400px, 60vh, 650px);
-}
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .hero {
-  min-height: clamp(400px, 60vh, 650px);
-}
-
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-}
-</style>
-
-
-<link rel="preload" href="css/style.css" as="style"
-onload="this.onload=null;this.rel='stylesheet'">
-
-<noscript>
-<link rel="stylesheet" href="css/style.css">
-</noscript>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 </head>
 
-
-
-
-
 <body>
-
-<!-- HEADER / NAVIGATION -->
-
-<header>
-
-<div class="container navbar">
-
-<div class="logo">
-<a href="index.html">
-<img src="images/aieg-logo.png" alt="AIEG Logo">
-</a>
-</div>
-
-<!-- HAMBURGER BUTTON -->
-
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<nav>
-
-<ul class="nav-links" id="navLinks">
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="courses.html">Courses</a></li>
-<li><a href="partnerships.html">Partnerships</a></li>
-<li><a href="resources.html">Resources</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
-</header>
-
-
-<section class="hero">
-  
-  <div class="hero-content">
-
-<h1>African Institute for Ethical Governance</h1>
-
-<p>
-AIEG delivers an integrated suite of programmes and consulting services designed to foster ethical transformation,
-institutional reform, and sustainable governance across both public and private sectors.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="container">
-
-
-<h2 class="section-title">About AIEG</h2>
-
-<p>
-The African Institute for Ethics and Governance (AIEG) is an African-based organisation dedicated to promoting ethical leadership, institutional integrity, and governance across the public and private sectors. Founded under the leadership of Professor Eddy Maloka, Nojozi Nogolide, Norman Murray Ingledew, Dr Wynand Goosen, and Patrick Mugumo. AIEG is driven by the belief that ethical transformation is central to Africa’s development. Through education, research, advisory services, and leadership development, AIEG strengthens governance systems, ethical cultures, and accountability mechanisms in governments, corporates, and civil society—positioning integrity as a foundation for sustainable growth.
-</p>
-
-</section>
-
-
-<section class="container">
-
-
-<h2 class="section-title">Vision</h2>
-
-<p>To be Africa’s leading institute for ethical transformation and governance excellence — shaping a culture of integrity and accountability in institutions and enterprises.</p>
-
-
-<h2 class="section-title">Mission</h2>
-
-<p>
-To advance ethical leadership, institutional integrity, and governance through education, research, advisory services, and leadership development across all sectors.
-</p>
-
-
-<h2 class="section-title">Core Values</h2>
-
-<div class="core-values-wheel">
-
-  <div class="wheel-container">
-    <img src="images/wheel.webp" alt="Core Values Wheel">
-
-    <!-- Hotspots -->
-    <a href="#integrity" class="hotspot integrity"></a>
-    <a href="#accountability" class="hotspot accountability"></a>
-    <a href="#innovation" class="hotspot innovation"></a>
-    <a href="#ownership" class="hotspot ownership"></a>
-    <a href="#professionalism" class="hotspot professionalism"></a>
-    <a href="#ubuntu" class="hotspot ubuntu"></a>
-  </div>
-
-</div>
-
-
-
-
-</section>
-
-
-<section class="container">
-
-
-<h2 class="section-title">Governance and Founding Funders</h2>
-
-<div class="team-grid">
-
-<div class="team-card">
-
-<img 
-  src="assets/team/eddy-maloka.webp"
-  srcset="
-    assets/team/eddy-maloka-400.webp 400w,
-    assets/team/eddy-maloka-800.webp 800w
-  "
-  sizes="(max-width: 600px) 100vw, 300px"
-  loading="lazy"
-  alt="Professor Eddy Maloka">
-
-<h3>Professor Eddy Maloka</h3>
-
-<p class="title">Founder & Institutional Development Partner</p>
-
-<p class="bio">
-Professor Eddy Maloka is a Visiting Professor at the University of Johannesburg and the former Chief Executive Officer of the African Peer Review Mechanism. With over 30 years of experience in public service, diplomacy, and academia, Maloka has established himself as an expert in leadership and institutional development. He holds a Ph.D. from the University of Cape Town and a Master's degree from the Institute of International and Development Studies in Geneva, Switzerland.
-</p>
-
-<button class="read-more">Read More</button>
-
-<a href="#" class="linkedin" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-
-<div class="team-card">
-
-<img 
-  src="assets/team/nojozi-nogolide.webp"
-  srcset="
-    assets/team/nojozi-nogolide-400.webp 400w,
-    assets/team/nojozi-nogolide-800.webp 800w
-  "
-  sizes="(max-width: 600px) 100vw, 300px"
-  loading="lazy"
-  alt="Nojozi Nogolide">
-
-<h3>Nojozi Nogolide</h3>
-
-<p class="title">Founding Funder & Executive Director</p>
-
-<p class="bio">
-Nogolide Nojozi holds a Master's degree in Public Management and Development from the University of Witwatersrand. She possesses a robust set of skills and experience in fostering good governance practices and engineering strategic interventions that have led to many organisational growths, improved performance, and stability in the institutions she has served. She has navigated complex governance frameworks crucial for ethical leadership building and good governance conduct. As a diplomat by training, she has participated in numerous international platforms to foster relations on best global practices with various stakeholders.
-</p>
-
-<button class="read-more">Read More</button>
-
-<a href="https://www.linkedin.com/in/nogolide-nojozi-76679118" class="linkedin" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-
-<div class="team-card">
-
-<img 
-  src="assets/team/norman-ingledew.webp"
-  srcset="
-    assets/team/norman-ingledew-400.webp 400w,
-    assets/team/norman-ingledew-800.webp 800w
-  "
-  sizes="(max-width: 600px) 100vw, 300px"
-  loading="lazy"
-  alt="Norman Ingledew">
-
-<h3>Norman Murray Ingledew</h3>
-
-<p class="title">Founding Funder & Strategic Finance Partner</p>
-
-<p class="bio">
-Norman has extensive business experience and knowledge of several African industries and countries over the past 30 years. As a Pilot in her Majesty’s government, he developed a sense of values and dedication that served him well in his business career. He trained and graduated from the Britannia Royal Naval College (BRNC) in Dartmouth, United Kingdom, where he served as a Naval Officer and Specialist Pilot for various jet aircraft. In South Africa, Norman has also been a non-executive director of several listed companies on the Johannesburg Stock Exchange, specialising in retail, wholesale plumbing hardware distribution, mining, and IT. Norman possesses extensive experience and leadership qualities and is dedicated to South Africa's development. As head of Business Development, he is well-positioned to inspire corporate South Africa to foster a new value system that resists corruption at all levels.
-</p>
-
-<button class="read-more">Read More</button>
-
-<a href="https://www.linkedin.com/in/norman-ingledew-4351a81b3" class="linkedin" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-
-<div class="team-card">
-
-<img 
-  src="assets/team/wynand-goosen.webp"
-  srcset="
-    assets/team/wynand-goosen-400.webp 400w,
-    assets/team/wynand-goosen-800.webp 800w
-  "
-  sizes="(max-width: 600px) 100vw, 300px"
-  loading="lazy"
-  alt="Dr Wynand Goosen">
-
-<h3>Dr Wynand Goosen</h3>
-
-<p class="title">Founding Funder & Research, Policy & Governance Advisor</p>
-
-<p class="bio">
-Dr Wynand Goosen is the CEO of the Infomage RIMS Group and a seasoned strategist and human capital management expert with a distinguished track record in designing and implementing high-impact development systems across the public and private sectors. He pioneered South Africa’s first Skills Development Facilitator Programme, authored the New Venture Creation Programme for entrepreneurial development, established structured entrepreneurial incubators, and developed foresight, innovation, and management information systems that link strategy directly to execution and productivity. His work includes facilitating strategic development workshops, creating international collaborative frameworks between South Africa and the European Union. Dr Goosen has founded several successful enterprises, including The Learning Corporation Ltd, The Infomage RIMS Group, SkillzBook, and Gold Rose Investments. He holds three doctoral degrees in Business, Metaphysics and Human Capital, as well as a Postdoctoral qualification from Switzerland. He serves on the boards of multiple professional organizations and is an internationally recognised lecturer, PhD supervisor and examiner in Management and Leadership, as well as a well-known conference speaker featured in print and broadcast media.
-</p>
-
-<button class="read-more">Read More</button>
-
-<a href="https://www.linkedin.com/in/drwynandgoosen" class="linkedin" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-
-<div class="team-card">
-
-<img 
-  src="assets/team/patrick-mugumo.webp"
-  srcset="
-    assets/team/patrick-mugumo-400.webp 400w,
-    assets/team/patrick-mugumo-800.webp 800w
-  "
-  sizes="(max-width: 600px) 100vw, 300px"
-  loading="lazy"
-  alt="Patrick Mugumo">
-
-<h3>Patrick Mugumo</h3>
-
-<p class="title">Founding Funder & Strategic Partnerships Director</p>
-
-<p class="bio">
-Patrick is a highly experienced professional with over a decade of expertise in Project Management, Business Management, Information Technology, and Human Resources. Currently, he holds the position of Director at IRG Group and is a distinguished member of the South African Board for People Practices (SABPP). He has earned the Master’s HR Professional (MHRP) designation and serves as the Deputy Chair of the SABPP Ethics Committee. Patrick has a keen focus on integrating technology and innovation into HR practices, and he is a specialist in leveraging Artificial Intelligence (AI) to drive efficiency and excellence. He has a master’s degree in Programme Management and is actively pursuing a Doctorate in Leadership, Technology, and Innovation Management.
-</p>
-
-<button class="read-more">Read More</button>
-
-<a href="https://www.linkedin.com/in/patrick-mugumo-22928923" class="linkedin" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-
-
-<!-- COURSES -->
-
-
-
-<!-- PARTNERSHIPS -->
-
-
-
-<!-- RESOURCES -->
-
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-
-
-</div>
-
-</section>
-
-<footer class="footer">
-
-<div class="container footer-grid">
-
-  <!-- About -->
-  <div class="footer-col">
-    <h3>AIEG</h3>
-    <p>
-      Promoting ethical leadership, institutional integrity, and governance
-      excellence across Africa.
-    </p>
-  </div>
-
-  <!-- Quick Links -->
-  <div class="footer-col">
-    <h4>Quick Links</h4>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Contact -->
-  <div class="footer-col">
-    <h4>Contact</h4>
-    <p>+27 011 886 2727</p>
-    <p>info@aiegr.org</p>
-    <p>240 Blairgowrie Drive<br>
-Randburg, Johannesburg<br>
-South Africa</p>
-  </div>
-
-  <!-- Social -->
-  <div class="footer-col">
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <a href="https://web.facebook.com/profile.php?id=61573634230975" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <a href="index.html" aria-label="AIEG – go to homepage">
+          <img src="images/aieg-logo.png" alt="African Institute for Ethical Governance logo" width="140" height="70">
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-</div>
+  <main id="main">
 
-<div class="footer-bottom">
-  <p>© 2026 African Institute for Ethical Governance (AIEG). All rights reserved.</p>
-</div>
+    <section class="hero" aria-label="Page banner">
+      <div class="hero-content">
+        <h1 class="reveal-text">About AIEG</h1>
+        <p class="reveal-text delay">
+          AIEG delivers an integrated suite of programmes and consulting services designed to foster ethical
+          transformation, institutional reform, and sustainable governance across both public and private sectors.
+        </p>
+      </div>
+    </section>
 
-</footer>
+    <!-- ABOUT -->
+    <section aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-title">About AIEG</h2>
+        <p>
+          The African Institute for Ethics and Governance (AIEG) is an African-based organisation dedicated to
+          promoting ethical leadership, institutional integrity, and governance across the public and private sectors.
+          Founded under the leadership of Professor Eddy Maloka, Nojozi Nogolide, Norman Murray Ingledew,
+          Dr Wynand Goosen, and Patrick Mugumo. AIEG is driven by the belief that ethical transformation is central
+          to Africa's development. Through education, research, advisory services, and leadership development, AIEG
+          strengthens governance systems, ethical cultures, and accountability mechanisms in governments, corporates,
+          and civil society — positioning integrity as a foundation for sustainable growth.
+        </p>
+      </div>
+    </section>
 
-<script src="js/script.js" defer></script>
+    <!-- VISION / MISSION / VALUES -->
+    <section aria-labelledby="vmv-heading">
+      <div class="container">
+        <h2 id="vmv-heading" class="section-title">Vision, Mission &amp; Core Values</h2>
 
+        <h3>Vision</h3>
+        <p>To be Africa's leading institute for ethical transformation and governance excellence — shaping a culture of integrity and accountability in institutions and enterprises.</p>
 
+        <h3>Mission</h3>
+        <p>To advance ethical leadership, institutional integrity, and governance through education, research, advisory services, and leadership development across all sectors.</p>
 
+        <h3>Core Values</h3>
 
+        <div class="core-values-wheel">
+          <div class="wheel-container" role="img" aria-label="Core values wheel: Integrity, Accountability, Innovation, Ownership, Professionalism, Ubuntu">
+            <img src="images/wheel.webp" alt="AIEG Core Values Wheel showing six segments: Integrity, Accountability, Innovation, Ownership, Professionalism, Ubuntu" width="500" height="500" loading="lazy">
+            <a href="#integrity"      class="hotspot integrity"       aria-label="Integrity value"></a>
+            <a href="#accountability" class="hotspot accountability"   aria-label="Accountability value"></a>
+            <a href="#innovation"     class="hotspot innovation"       aria-label="Innovation value"></a>
+            <a href="#ownership"      class="hotspot ownership"        aria-label="Ownership value"></a>
+            <a href="#professionalism"class="hotspot professionalism"  aria-label="Professionalism value"></a>
+            <a href="#ubuntu"         class="hotspot ubuntu"           aria-label="Ubuntu value"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section aria-labelledby="team-heading">
+      <div class="container">
+        <h2 id="team-heading" class="section-title">Governance and Founding Funders</h2>
+
+        <div class="team-grid">
+
+          <!-- Prof Eddy Maloka -->
+          <div class="team-card">
+            <img
+              src="assets/team/eddy-maloka.webp"
+              srcset="assets/team/eddy-maloka-400.webp 400w, assets/team/eddy-maloka-800.webp 800w"
+              sizes="(max-width:600px) 100vw, 300px"
+              width="140" height="140"
+              loading="lazy"
+              alt="Professor Eddy Maloka">
+            <h3>Professor Eddy Maloka</h3>
+            <p class="title">Founder &amp; Institutional Development Partner</p>
+            <p class="bio">
+              Professor Eddy Maloka is a Visiting Professor at the University of Johannesburg and the former
+              Chief Executive Officer of the African Peer Review Mechanism. With over 30 years of experience in
+              public service, diplomacy, and academia, Maloka has established himself as an expert in leadership
+              and institutional development. He holds a Ph.D. from the University of Cape Town and a Master's
+              degree from the Institute of International and Development Studies in Geneva, Switzerland.
+            </p>
+            <button class="read-more" aria-expanded="false">Read More</button>
+            <a href="#" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Professor Eddy Maloka on LinkedIn (opens in new tab)">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          </div>
+
+          <!-- Nojozi Nogolide -->
+          <div class="team-card">
+            <img
+              src="assets/team/nojozi-nogolide.webp"
+              srcset="assets/team/nojozi-nogolide-400.webp 400w, assets/team/nojozi-nogolide-800.webp 800w"
+              sizes="(max-width:600px) 100vw, 300px"
+              width="140" height="140"
+              loading="lazy"
+              alt="Nojozi Nogolide">
+            <h3>Nojozi Nogolide</h3>
+            <p class="title">Founding Funder &amp; Executive Director</p>
+            <p class="bio">
+              Nogolide Nojozi holds a Master's degree in Public Management and Development from the University
+              of Witwatersrand. She possesses a robust set of skills and experience in fostering good governance
+              practices and engineering strategic interventions. As a diplomat by training, she has participated
+              in numerous international platforms to foster relations on best global practices.
+            </p>
+            <button class="read-more" aria-expanded="false">Read More</button>
+            <a href="https://www.linkedin.com/in/nogolide-nojozi-76679118" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Nojozi Nogolide on LinkedIn (opens in new tab)">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          </div>
+
+          <!-- Norman Ingledew -->
+          <div class="team-card">
+            <img
+              src="assets/team/norman-ingledew.webp"
+              srcset="assets/team/norman-ingledew-400.webp 400w, assets/team/norman-ingledew-800.webp 800w"
+              sizes="(max-width:600px) 100vw, 300px"
+              width="140" height="140"
+              loading="lazy"
+              alt="Norman Murray Ingledew">
+            <h3>Norman Murray Ingledew</h3>
+            <p class="title">Founding Funder &amp; Strategic Finance Partner</p>
+            <p class="bio">
+              Norman has extensive business experience and knowledge of several African industries over 30 years.
+              As a Pilot in Her Majesty's government, he developed values and dedication that served him well in
+              his business career. He trained at the Britannia Royal Naval College, where he served as a Naval
+              Officer and Specialist Pilot. In South Africa, Norman has been a non-executive director of several
+              listed companies on the JSE, specialising in retail, wholesale plumbing hardware, mining, and IT.
+            </p>
+            <button class="read-more" aria-expanded="false">Read More</button>
+            <a href="https://www.linkedin.com/in/norman-ingledew-4351a81b3" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Norman Murray Ingledew on LinkedIn (opens in new tab)">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          </div>
+
+          <!-- Dr Wynand Goosen -->
+          <div class="team-card">
+            <img
+              src="assets/team/wynand-goosen.webp"
+              srcset="assets/team/wynand-goosen-400.webp 400w, assets/team/wynand-goosen-800.webp 800w"
+              sizes="(max-width:600px) 100vw, 300px"
+              width="140" height="140"
+              loading="lazy"
+              alt="Dr Wynand Goosen">
+            <h3>Dr Wynand Goosen</h3>
+            <p class="title">Founding Funder &amp; Research, Policy &amp; Governance Advisor</p>
+            <p class="bio">
+              Dr Wynand Goosen is the CEO of the Infomage RIMS Group and a seasoned strategist and human capital
+              management expert. He pioneered South Africa's first Skills Development Facilitator Programme,
+              authored the New Venture Creation Programme, and developed foresight and innovation systems. He holds
+              three doctoral degrees in Business, Metaphysics, and Human Capital, plus a Postdoctoral qualification
+              from Switzerland.
+            </p>
+            <button class="read-more" aria-expanded="false">Read More</button>
+            <a href="https://www.linkedin.com/in/drwynandgoosen" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Dr Wynand Goosen on LinkedIn (opens in new tab)">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          </div>
+
+          <!-- Patrick Mugumo -->
+          <div class="team-card">
+            <img
+              src="assets/team/patrick-mugumo.webp"
+              srcset="assets/team/patrick-mugumo-400.webp 400w, assets/team/patrick-mugumo-800.webp 800w"
+              sizes="(max-width:600px) 100vw, 300px"
+              width="140" height="140"
+              loading="lazy"
+              alt="Patrick Mugumo">
+            <h3>Patrick Mugumo</h3>
+            <p class="title">Founding Funder &amp; Strategic Partnerships Director</p>
+            <p class="bio">
+              Patrick is a highly experienced professional with over a decade of expertise in Project Management,
+              Business Management, IT, and Human Resources. He is a distinguished member of the South African Board
+              for People Practices (SABPP) and holds the Master's HR Professional (MHRP) designation. He serves as
+              Deputy Chair of the SABPP Ethics Committee and is actively pursuing a Doctorate in Leadership,
+              Technology, and Innovation Management.
+            </p>
+            <button class="read-more" aria-expanded="false">Read More</button>
+            <a href="https://www.linkedin.com/in/patrick-mugumo-22928923" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Patrick Mugumo on LinkedIn (opens in new tab)">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>AIEG</h3>
+        <p>Promoting ethical leadership, institutional integrity, and governance excellence across Africa.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address style="font-style:normal;">
+          <p>+27 011 886 2727</p>
+          <p><a href="mailto:info@aiegr.org" style="color:#cbd5e1;">info@aiegr.org</a></p>
+          <p>240 Blairgowrie Drive<br>Randburg, Johannesburg<br>South Africa</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://web.facebook.com/profile.php?id=61573634230975" target="_blank" rel="noopener noreferrer" aria-label="Visit AIEG on Facebook (opens in new tab)">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 African Institute for Ethical Governance (AIEG). All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>
